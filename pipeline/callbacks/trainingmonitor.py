@@ -1,12 +1,12 @@
 # import packages
-from keras.callbacks import BaseLogger
+from keras.callbacks import Callback
 from .myencoder import MyEncoder
 import matplotlib.pyplot as plt
 import numpy as np
 import json
 import os
 
-class TrainingMonitor(BaseLogger):
+class TrainingMonitor(Callback):
 
     def __init__(self, figPath, jsonPath = None, startAt = 0):
         # store the output path for the figure , the path to the JSON
