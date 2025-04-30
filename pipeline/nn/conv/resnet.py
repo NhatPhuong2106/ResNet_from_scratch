@@ -1,17 +1,11 @@
 # import packages
-from keras.layers.normalization import BatchNormalization
-from keras.layers.convolutional import Conv2D
-from keras.layers.convolutional import MaxPooling2D
-from keras.layers.convolutional import AveragePooling2D
-from keras.layers.convolutional import ZeroPadding2D
-from keras.layers.core import Activation
-from keras.layers.core import Dense
-from keras.layers import Flatten
-from keras.layers import Input
-from keras.layers import add
-from keras.models import Model
-from keras.regularizers import l2
-from keras import backend as K
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D, ZeroPadding2D
+from tensorflow.keras.layers import Activation, Dense, Flatten, Input, Add
+from tensorflow.keras.models import Model
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras import backend as K
+
 
 class ResNet:
     @staticmethod
