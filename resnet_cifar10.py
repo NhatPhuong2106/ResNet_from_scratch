@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelBinarizer
 from pipeline.nn.conv import ResNet
 from pipeline.callbacks import EpochCheckpoint
 from pipeline.callbacks import TrainingMonitor
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
 from keras.optimizers import Adam
 from keras.datasets import cifar10
