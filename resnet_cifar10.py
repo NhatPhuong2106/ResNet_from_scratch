@@ -40,8 +40,9 @@ indices = np.random.permutation(len(trainX))
 trainX = trainX[indices[:subset_size]]
 trainY = trainY[indices[:subset_size]]
 
-testX = testX[indices[:subset_size]]
-testY = testY[indices[:subset_size]]
+subset_size_test = int(len(testX) * percent)
+testX = testX[indices[:subset_size_test]]
+testY = testY[indices[:subset_size_test]]
 
 
 # apply mean subtraction to the data
