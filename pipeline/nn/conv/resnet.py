@@ -38,7 +38,7 @@ class ResNet:
                 kernel_regularizer = l2(reg))(act1)
 
         # add together the shortcut and the final CONV
-        x = add([conv3, shortcut])
+        x = Add([conv3, shortcut])
 
         # return the addition as the output of the ResNet module
         return x
