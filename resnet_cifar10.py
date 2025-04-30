@@ -33,6 +33,14 @@ print("[INFO] loading CIFAR-10 data...")
 trainX = trainX.astype("float")
 testX = testX.astype("float")
 
+percent = 0.2  # 20%
+subset_size = int(len(trainX) * percent)
+
+indices = np.random.permutation(len(trainX))
+trainX = trainX[indices[:subset_size]]
+trainY = trainY[indices[:subset_size]]
+
+
 # apply mean subtraction to the data
 mean = np.mean(trainX, axis = 0)
 trainX -= mean
