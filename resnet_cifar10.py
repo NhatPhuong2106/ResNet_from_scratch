@@ -55,7 +55,7 @@ aug = ImageDataGenerator(width_shift_range = 0.1, height_shift_range = 0.1,
 # the network (ResNet-56) and compile the model
 if args["model"] is None:
     print("[INFO] compiling model...")
-    opt = SGD(lr=1e-1, momentum = 0.9)
+    opt = SGD(learning_rate=1e-1, momentum = 0.9)
     # opt = Adam(lr=1e-3)
     model = ResNet.build(32, 32, 3, 10, (9, 9, 9), (64, 64, 128, 256), reg = 0.0005)
     model.compile(loss = "categorical_crossentropy", optimizer = opt,
