@@ -80,7 +80,7 @@ callbacks = [
 
 # train the network
 print("[INFO] training network...")
-model.fit_generator(
+model.fit(
     aug.flow(trainX, trainY, batch_size = 64),
     validation_data = (testX, testY),
     steps_per_epoch = len(trainX) // 64,
